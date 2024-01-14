@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Only individuals who are between the age of 18 and 75 are requested to fill the form. </p>
+        <p>Details should be correctly filled.</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <label for="name" id="name-label">
+                Name:
+               <input type="text" name="name" id="name"  placeholder="Enter your name:" required />
+            </label>
+            <label for="email" id="email-label">
+                Email:
+               <input type="email" name="email" id="email"  placeholder="Enter your email:" required />
+            </label>
+            <label for="name" id="number-label">
+                Age:
+               <input type="number" name="age" id="number" min="18" max="75" placeholder="Enter your age:" required/>
+            </label>
+            <label for="dropdown" id="select-label">
+                Who are you?
+                <select id="dropdown" required />
+                <option disabled selected> Select an option</option>
+                <option value="Working Professionals">Working Professionals</option>
+                <option value="Student">Student</option>
+                </select>
+            </label>
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input id="male" type="radio" name="gender" value="male">Male</label>
+                <label><input id="female" type="radio" name="gender" value="female">Female</label>
+                <label><input id="unknown" type="radio" name="gender" value="unknown" checked>Prefer not to say</label>
+                </fieldset>
+                <fieldset>
+                    <legend>What are your hobbies?</legend>
+                <label for="Dancing">Dancing <input id="dance" type="checkbox" name="hobbies" value="Dancing" checked></label>
+                <label for="Singing">Singing <input id="singing" type="checkbox" name="hobbies" value="Singing"></label>
+                <label for="Reading">Reading <input id="reading" type="checkbox" name="hobbies" value="Reading"></label>
+                <label for="Painting">Painting<input id="painting" type="checkbox" name="hobbies" value="Painting"></label>
+                <label for="Coding">Coding <input id="coding" type="checkbox" name="hobbies" value="Coding"></label>
+                </fieldset>
+            <label for="message" id="message-label">Leave a message for us:
+                <textarea name="message" id="message" placeholder="Type here:" required></textarea>
+            </label>
+              <button type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
