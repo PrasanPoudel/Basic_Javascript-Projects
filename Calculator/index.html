@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Calculator Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<div id="calculator">
+<input type="text" class="screen" id="screen" readonly/>
+<hr>
+<div class="all-input-buttons">
+  <button class="input-button operational-button" onclick="clearDisplay()">C</button>
+  <button class="input-button operational-button" onclick="
+  screen +='%';
+result =document.querySelector('.screen').value= screen;
+  ">%</button>
+  <button class="input-button operational-button" onclick="deleteLastInput()">⌫</button>
+  <button class="input-button operational-button" onclick="
+  screen +='/';
+result =document.querySelector('.screen').value= screen;
+  ">/</button>
+  <button class="input-button" onclick="
+  screen +='7';
+result =document.querySelector('.screen').value= screen;
+  ">7</button>
+  <button class="input-button"  onclick="
+  screen +='8';
+result =document.querySelector('.screen').value= screen;
+  ">8</button>
+  <button class="input-button" onclick="
+  screen +='9';
+result =document.querySelector('.screen').value= screen;
+  ">9</button>
+  <button class="input-button operational-button" onclick="
+  screen +='*';
+result =document.querySelector('.screen').value= screen;
+  ">X</button>
+  <button class="input-button" onclick="
+  screen +='4';
+result =document.querySelector('.screen').value= screen;
+  ">4</button>
+  <button class="input-button" onclick="
+  screen +='5';
+result =document.querySelector('.screen').value= screen;
+  ">5</button>
+  <button class="input-button" onclick="
+  screen +='6';
+result =document.querySelector('.screen').value= screen;
+  ">6</button>
+  <button class="input-button operational-button" onclick="
+  screen +='-';
+result =document.querySelector('.screen').value= screen;
+  ">-</button>
+  <button class="input-button" onclick="
+  screen +='1';
+result =document.querySelector('.screen').value= screen;
+  ">1</button>
+  <button class="input-button" onclick="
+  screen +='2';
+result =document.querySelector('.screen').value= screen;
+  ">2</button>
+  <button class="input-button" onclick="
+  screen +='3';
+result =document.querySelector('.screen').value= screen;
+  ">3</button>
+  <button class="input-button operational-button" onclick="
+  screen +='+';
+result =document.querySelector('.screen').value= screen;
+  ">+</button>
+  <button class="input-button" onclick="
+  screen +='00';
+result =document.querySelector('.screen').value= screen;
+  ">00</button>
+  <button class="input-button" onclick="
+  screen +='0';
+result =document.querySelector('.screen').value= screen;
+  ">0</button>
+  <button class="input-button" onclick="
+  screen +='.';
+result =document.querySelector('.screen').value= screen;
+  ">.</button>
+  <button class="input-button operational-button equalto-button" onclick="displayResult()">=</button>
+</div>
+</div>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
