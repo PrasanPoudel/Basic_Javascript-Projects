@@ -59,3 +59,9 @@ padding: 5px;
 .equalto-button{
   background-color: orange;
 }
+@media screen and (max-width:500px) {
+  #calculator{
+    height: 95%;
+    width: 95%
+  }
+}
