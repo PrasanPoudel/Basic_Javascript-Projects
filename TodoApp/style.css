@@ -18,7 +18,7 @@ main{
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-image: url('../../MyPortfolio/images/background.png');
+  background-image: url('./background.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
