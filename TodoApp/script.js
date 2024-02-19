@@ -4,7 +4,6 @@ window.onload = function() {
   inputElement.focus();
   displayItems();
 };
-
 function addTodo() {
   let todoItem = inputElement.value.trim();
   if (todoItem !== '') {
@@ -24,17 +23,17 @@ function displayItems() {
     if (item!=='') {
       newHtml += `
       <div class="todoListItem">
-        <p>${item}</p>
-        <button class='btn-delete' onclick=
-        "
-        todoList.splice(${i}, 1);
-        updateLocalStorage();
-        displayItems();
-        ">
-        ⌫
-        </button>
+      <p>${item}</p>
+      <button class='btn-delete' onclick=
+      "
+      todoList.splice(${i}, 1);
+      updateLocalStorage();
+      displayItems();
+      ">
+      ⌫
+      </button>
       </div>
-    `;
+      `;
     }
   }
   containerElement.innerHTML = newHtml;
@@ -42,4 +41,7 @@ function displayItems() {
 
 function updateLocalStorage() {
   localStorage.setItem('todos', JSON.stringify(todoList));
+}
+function capitalizeFirstLetter(element) {
+  element.value = element.value.charAt(0).toUpperCase() + element.value.slice(1);
 }

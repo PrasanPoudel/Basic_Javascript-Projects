@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+  color: #fff;
+  text-decoration: none;
 }
 main{
   display: flex;
@@ -10,18 +11,21 @@ main{
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-color: black;
 }
 .main-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
-  background:black;
+  align-items: center;
+  gap: 25px;
+  background-image: url('../../MyPortfolio/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 50%;
-  height: 90%;
-  border-radius: 25px;
-  border: 5px solid white;
+  height: 90vh;
+  border: 5px solid #fff;
+  box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
+  2.5px 2.5px 5px rgb(100,100,100,1);
 }
 .main-heading{
   display: flex;
@@ -31,35 +35,36 @@ main{
 }
 .todo-input-container{
   display: flex;
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.184);
-  border-radius: 25px;
-  overflow: hidden;
-  border: none;
+  width: 95%;
+  border: 5px solid #fff;
   outline: none;
+  background:transparent;
 }
 #todo-input{
-  border: none;
-  outline: none;
   width: 80%;
   height: 50px;
   padding: 10px;
   font-size: 25px;
   background: transparent;
+  outline: none;
+}
+#todo-input::placeholder{
+  color: #ffffff74;
 }
 #btn-addTodo{
   width: 20%;
-  height: 50px;
-  border: 1px solid white;
+  height: 100%;
+  cursor: pointer;
+  border: none;
   outline: none;
-  background-color: white;
-  border-radius: 25px;
+}
+#btn-addTodo img{
+height: 25px;
 }
 .todo-container{
   margin-top: 10px;
-  width: 100%;
-  border: 5px solid white;
-  border-radius: 25px;
+  width: 95%;
+  border: 5px solid #fff;
   height: 350px;
   overflow-y: auto;
 }
@@ -74,33 +79,33 @@ main{
   height: 50px;
   width: 20%;
   background-color: red;
-  border-radius: 25px;
   border: none;
   outline: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
 }
 .todoListItem p{
   padding: 10px;
   width: 80%;
   overflow-x: auto;
-  border-radius: 25px;
   text-transform: capitalize;
 }
-#btn-addTodo:active, .btn-delete:active{
-  background-color: gray;
-  border: 2.5px solid black;
-  color: black;
-  cursor: pointer;
+#btn-addTodo:active{
+  filter: invert(100%);
+}
+.btn-delete:active{
+  background-color: #fff;
 }
 footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin:25px 0 25px 0;
+  text-align: center;
 }
 @media screen and (max-width:500px) {
   .main-container{
-    height: 100%;
-    width: 100%;
-    border-radius: 1px;
+    width: 95%;
   }
 }

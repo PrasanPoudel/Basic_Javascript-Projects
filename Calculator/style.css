@@ -6,8 +6,8 @@
   font-size: 25px;
 }
 *::selection{
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
 main{
   display: flex;
@@ -16,14 +16,13 @@ main{
 }
 #calculator{
   margin: auto;
-  background-color: white;
+  background-color: #fff;
+  border: 2.5px solid rgb(100,100,100,1);
   height: 500px;
   width: 300px;
-  border-radius: 25px;
   padding: 10px;
-  border: 1px solid black;
-  box-shadow: -2.5px -2.5px 5px black,
-  2.5px 2.5px 5px black;
+  box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
+  2.5px 2.5px 5px rgb(100,100,100,1);
 }
 .screen{
   padding: 10px;
@@ -47,21 +46,22 @@ padding: 5px;
   cursor: pointer;
   background-color: transparent;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid #000;
+  text-align: center;
 }
 .input-button:active{
-  background-color: black;
-  color: white;
+  background-color: rgb(100,100,100,1);
+  color: #fff;
 }
 .operational-button{
-  background-color: gray;
+  background-color: rgb(100,100,100,1);
 }
 .equalto-button{
   background-color: orange;
 }
 @media screen and (max-width:500px) {
   #calculator{
-    height: 95%;
+    height: 95vh;
     width: 95%
   }
 }

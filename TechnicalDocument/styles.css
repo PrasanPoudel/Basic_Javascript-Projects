@@ -5,9 +5,10 @@
   padding: 0;
   text-align: justify;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 body{
-  background: gray;
+  background: rgba(100, 100, 100, 1);
 }
 #navbar{
   position:fixed;
@@ -16,19 +17,19 @@ body{
   display: flex;
   flex-direction: column;
   align-items: left;
-  border-right: 10px solid black;
+  border-right: 10px solid #000;
   width: 25%;
   height: 100%;
   padding-left: 10px;
 }
 .main-heading{
   margin-bottom: 25px;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #000;
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
 }
 #main-doc{
-  border: 1px solid black;
+  border: 1px solid #000;
   position: absolute;
   top: 0;
   right: 5px;
@@ -43,8 +44,8 @@ body{
 }
 .main-section-heading{
   font-family: 'Roboto', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   width: 200px;
   font-size: 35px;
   margin: 10px 0;
@@ -58,7 +59,7 @@ h3{
   margin: 10px 0;
 }
 code{
-  background-color: gray;
+  background-color: rgba(100, 100, 100, 1);
 }
 .navbar-links{
   margin-top: 25px;
@@ -67,17 +68,17 @@ code{
   flex-direction: column;
 }
 .nav-link{
-  color: black;
+  color: #000;
   text-decoration: none;
   margin-top: 25px;
 }
 .nav-link:hover{
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
 }
 .nav-link:active{
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
 }
 footer{
   width: 100%;
@@ -86,12 +87,12 @@ footer{
   align-items: center;
 }
 footer p{
-  color: white;
+  color: #fff;
   font-size: 20px;
 }
 footer a{
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 @media screen and (max-width:1200px)
 {
