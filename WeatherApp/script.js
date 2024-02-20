@@ -2,29 +2,17 @@ function onload(){
     document.querySelector('.city-input').focus();
 };
 onload();
-const apiKey = '8d6454a89dff871786a0307b0dbebbee'
-async function fetchWeatherData(city) {
-    try {
-        const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
-        );
-
-        if (!response.ok) {
-            throw new Error("Unable to fetch weather data");
-        }
-        const data = await response.json();
-        console.log(data);
-        // console.log(data.main.temp);
-        // console.log(data.name);
-        // console.log(data.wind.speed);
-        // console.log(data.main.humidity);
-        // console.log(data.visibility);
-        updateWeatherUI(data);
-    } catch (error) {
-        console.error(error);
+// DOM manipulation
+function showData(){
+    if(document.querySelector('.city-input').value!==""){
+    document.querySelector('.additional-info').style.display="flex";
+    document.querySelector('.temperature-info').style.display="flex";
+    document.querySelector('.city-date-section').style.display="flex";
+    }
+    else{
+        alert("Input field can't be empty");
     }
 }
-
 const cityElement = document.querySelector(".city");
 const temperature = document.querySelector(".temp");
 const windSpeed = document.querySelector(".wind-speed");
@@ -35,6 +23,38 @@ const descriptionText = document.querySelector(".description-text");
 const date = document.querySelector(".date");
 const descriptionIcon = document.querySelector(".description i");
 
+// Using Api for Weather Data
+const apiKey = '8d6454a89dff871786a0307b0dbebbee'
+async function fetchWeatherData(city) {
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+        );
+
+        if (!response.ok) {
+            throw new Error("Unable to fetch weather data. Given city's weather info is not available at the moment");
+        }
+        const data = await response.json();
+        // console.log(data);
+        // console.log(data.main.temp);
+        // console.log(data.name);
+        // console.log(data.wind.speed);
+        // console.log(data.main.humidity);
+        // console.log(data.visibility);
+        updateWeatherUI(data);
+    } catch (error) {
+        alert(error);
+        cityElement.textContent = "Unknown City";
+        temperature.textContent = "?";
+        windSpeed.textContent = "?";
+        humidity.textContent = "?";
+        visibility.textContent = "?";
+        descriptionText.textContent = "?";
+    
+        const currentDate = new Date();
+        date.textContent = currentDate.toDateString();
+    }
+}
 // fetchWeatherData();
 
 function updateWeatherUI(data) {
