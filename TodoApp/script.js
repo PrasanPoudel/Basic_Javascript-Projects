@@ -30,7 +30,7 @@ function displayItems() {
       updateLocalStorage();
       displayItems();
       ">
-      ⌫
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATNJREFUSEvtllESAUEMRHtvwklwEpwEJ+EmOAlHsa02KpWayUxmt6wP+fCVydNJJ3SYKbqZuPiDv9b5n2/1EcBqRDvuAC4AnlKjRvG5f7AbAdVPlwIvgan0MBGUZfaDcned1n17rxNCWerUf1BMFrwA8ChAWWTbK2CuDs4yNxoXzEJUagvq4tIydoUekNwNgNugKjUiF0woC3rxMcmQSzi/DKGM3Jiy4IiDNZyKZVU8byTBLWbScE+pdC8JpiGoOBIyU3ljZ25rZVsd2VsLrYG75uIaeY4mQENlRNZwqRswep2kgPWFwHMmrTogpV3OHYrmAyKz4rxTlylivmpz2cSI2Wq+ULHVushUcB4YeuAdpZ9FydP3uEaZzSGUakN/BFpAxTe1iouFogl/cLRjzfmztfoFNiZDHyBclzQAAAAASUVORK5CYII="/>
       </button>
       </div>
       `;

@@ -14,7 +14,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 100vh;
   width: 95%;
 }
 #calculator{
@@ -63,7 +63,7 @@ padding: 5px;
 }
 @media screen and (max-width:500px) {
   #calculator{
-    height: 90vh;
+    height: 80vh;
     width: 90%
   }
 }

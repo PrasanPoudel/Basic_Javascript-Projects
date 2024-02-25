@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 main{
@@ -18,14 +18,10 @@ main{
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-image: url('./background.png');
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
   height: 90vh;
-  border: 5px solid #fff;
-  box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
-  2.5px 2.5px 5px rgb(100,100,100,1);
 }
 .main-heading{
   display: flex;
@@ -36,9 +32,9 @@ main{
 .todo-input-container{
   display: flex;
   width: 95%;
-  border: 5px solid #fff;
   outline: none;
   background:transparent;
+  
 }
 #todo-input{
   width: 80%;
@@ -47,9 +43,12 @@ main{
   font-size: 25px;
   background: transparent;
   outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
 }
 #todo-input::placeholder{
-  color: #ffffff74;
+  color: rgb(100,100,100,1);
 }
 #btn-addTodo{
   width: 20%;
@@ -57,16 +56,20 @@ main{
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: #000;
 }
 #btn-addTodo img{
 height: 25px;
+filter: invert(100%);
 }
 .todo-container{
   margin-top: 10px;
   width: 95%;
-  border: 5px solid #fff;
+  border: 5px solid rgb(100,100,100,1);
   height: 350px;
   overflow-y: auto;
+  box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
+  2.5px 2.5px 5px rgb(100,100,100,1);
 }
 .todoListItem{
   font-size: 25px;
@@ -82,8 +85,11 @@ height: 25px;
   border: none;
   outline: none;
   cursor: pointer;
-  color: #000;
   font-size: 20px;
+}
+.btn-delete img{
+  filter: invert(100%);
+  height: 25px;
 }
 .todoListItem p{
   padding: 10px;
@@ -91,11 +97,9 @@ height: 25px;
   overflow-x: auto;
   text-transform: capitalize;
 }
-#btn-addTodo:active{
-  filter: invert(100%);
-}
-.btn-delete:active{
-  background-color: #fff;
+.btn-delete:active, #btn-addTodo:active{
+  background-color: rgb(100,100,100,1);
+  color: #fff;
 }
 footer{
   display: flex;
