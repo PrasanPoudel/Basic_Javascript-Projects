@@ -4,12 +4,7 @@ function onload(){
 onload();
 // DOM manipulation
 function showData(){
-    if(document.querySelector('.city-input').value!==""){
-    document.querySelector('.additional-info').style.display="flex";
-    document.querySelector('.temperature-info').style.display="flex";
-    document.querySelector('.city-date-section').style.display="flex";
-    }
-    else{
+    if(document.querySelector('.city-input').value==""){
         alert("Input field can't be empty");
     }
 }
@@ -44,15 +39,6 @@ async function fetchWeatherData(city) {
         updateWeatherUI(data);
     } catch (error) {
         alert(error);
-        cityElement.textContent = "Unknown City";
-        temperature.textContent = "?";
-        windSpeed.textContent = "?";
-        humidity.textContent = "?";
-        visibility.textContent = "?";
-        descriptionText.textContent = "?";
-    
-        const currentDate = new Date();
-        date.textContent = currentDate.toDateString();
     }
 }
 // fetchWeatherData();
@@ -64,7 +50,7 @@ function updateWeatherUI(data) {
     humidity.textContent = `${data.main.humidity}%`;
     visibility.textContent = `${data.visibility / 1000} km`;
     descriptionText.textContent = data.weather[0].description;
-
+    
     const currentDate = new Date();
     date.textContent = currentDate.toDateString();
     const weatherIconName = getWeatherIconName(data.weather[0].main);
@@ -76,7 +62,7 @@ const inputElement = document.querySelector(".city-input");
 
 formElement.addEventListener("submit", function (e) {
     e.preventDefault();
-
+    
     const city = inputElement.value;
     if (city !== "") {
         fetchWeatherData(city);
@@ -97,6 +83,16 @@ function getWeatherIconName(weatherCondition) {
         Haze: "cloud",
         Fog: "cloud",
     };
-
+    
     return iconMap[weatherCondition] || "help";
 }
+//default
+cityElement.textContent = "Unknown City";
+temperature.textContent = "?";
+windSpeed.textContent = "?";
+humidity.textContent = "?";
+visibility.textContent = "?";
+descriptionText.textContent = "?";
+
+const currentDate = new Date();
+date.textContent = currentDate.toDateString();
