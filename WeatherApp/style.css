@@ -7,6 +7,7 @@
 
 body {
   height: 100vh;
+  width: 100%;
   color: #fff;
   background-color:#000 ;
 }
@@ -16,10 +17,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 500px;
-  margin: 50px auto;
   padding: 25px;
   height: auto;
   box-shadow: rgba(100, 100, 100, 1) 0px 2.5px 10px;
+  margin: auto;
 }
 
 .search-form {
@@ -27,15 +28,15 @@ body {
   grid-template-columns: 75% 25%;
   height: 3.5rem;
   width: 100%;
-  border-radius: 25px;
   border: 2.5px solid #fff;
   overflow: hidden;
   background-color: #fff;
+  border-radius: 5px;
 }
 
 .search-form input{
-  font-size: 1.25rem;
-  font-weight: 550;
+  font-size: 1.5rem;
+  font-weight: 750;
   height: 100%;
   overflow: hidden;
   outline: none;
@@ -47,7 +48,7 @@ body {
 
 .search-btn {
   height: 100%;
-  background-color: rgb(1.5, 200, 250);
+  background-color: #000;
   border: none;
   outline: none;
   padding: 15px;
@@ -71,12 +72,12 @@ i{
 }
 
 .city-date-section .date {
-  background-color: rgb(1.5, 200, 250);
+  background-color: #000;
   padding: 25px 25px;
-  border: 5px double #fff;
+  border: 2.5px solid #fff;
   font-size: 1.5rem;
-  border-radius: 25px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .temperature-info {
@@ -120,18 +121,19 @@ i{
 .wind-info,
 .humidity-info,
 .visibility-info {
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
   padding: 25px 25px;
-  box-shadow: rgba(100, 100, 100, 1) 0px 2.5px 10px;
-  border-radius: 25px;
+  box-shadow: rgba(100, 100, 100, 1) 0px 2.5px 10px;  
   width: 100px;
   height: 200px;
   font-size: 1.25rem;
   font-weight: 600;
+  border-radius: 5px;
 }
 .additional-info .material-icons {
   font-size: 2.5rem;

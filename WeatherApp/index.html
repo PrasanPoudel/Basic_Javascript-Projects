@@ -7,7 +7,7 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-        <title>Weather App</title>
+        <title>Weather App developed by Prasan Poudel.</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -16,7 +16,8 @@
                 <input
                     class="city-input"
                     type="text"
-                    placeholder="City Name:"
+                    autofocus
+                    oninput="capitalizeFirstLetter(this)"
                 />
                 <button class="search-btn" type="submit" onclick="showData()">
                     <i class="material-icons">search</i>

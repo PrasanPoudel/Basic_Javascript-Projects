@@ -96,3 +96,7 @@ descriptionText.textContent = "?";
 
 const currentDate = new Date();
 date.textContent = currentDate.toDateString();
+
+function capitalizeFirstLetter(element) {
+    element.value = element.value.charAt(0).toUpperCase() + element.value.slice(1);
+  }
