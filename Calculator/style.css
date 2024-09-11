@@ -25,6 +25,8 @@ main{
   padding: 10px;
   box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
   2.5px 2.5px 5px rgb(100,100,100,1);
+  border-radius: 25px;
+  border: 2.5px solid #000;
 }
 .screen{
   padding: 10px;
@@ -63,7 +65,7 @@ padding: 5px;
 }
 @media screen and (max-width:500px) {
   #calculator{
-    height: 80vh;
+    height: 90vh;
     width: 90%
   }
 }

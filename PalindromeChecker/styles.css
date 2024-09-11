@@ -9,6 +9,9 @@ a{
     cursor: pointer;
     text-decoration: none;
 }
+body{
+    background-color: #000;
+}
 .content_box{
     box-shadow: -2.5px -2.5px 5px rgb(100,100,100,1),
     2.5px 2.5px 5px rgb(100,100,100,1);
@@ -93,6 +96,6 @@ footer{
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 1px solid #fff;
     background-color: #000;
+    font-size: 18px;
 }
