@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>News App</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./newsLogo.avif" alt="" class="logo">
+        </div>
+
+        <div class="header">
+        <div class="box">
+            <input type="text" id="searchKeyword" placeholder="">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>  
+        <select id="category">
+            <option value="general">General</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Health</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+        </select>
+        </div>
+        <div id="newsContainer">
+        </div>
+        <div id="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

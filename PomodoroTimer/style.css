@@ -55,3 +55,8 @@ button{
 #reset{
   background-color: #000;
 }
+@media screen and (width<750px){
+  .container{
+  box-shadow: none;
+  }
+}
